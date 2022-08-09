@@ -23,7 +23,7 @@ const toDos = [
   },
 
   {
-    description: 'Eat a 12 oz Steak',
+    description: 'Eat a 16 oz Steak',
     completed: false,
     index: 2
   },
