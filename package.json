@@ -9,6 +9,9 @@
     "start": "webpack serve --open",
     "server": "node server.js"
   },
+
+"eslintIgnore": ["main.bundle.js"],
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Amtresu/Webpack-Boiler-Plate.git"
