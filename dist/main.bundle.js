@@ -135,18 +135,40 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_images_3_dots_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../assets/images/3-dots.png */ \"./assets/images/3-dots.png\");\n\r\n\r\n\r\n\r\nconst menu1 = __webpack_require__(/*! ../../../../../../assets/images/3-dots.png */ \"./assets/images/3-dots.png\")\r\n\r\nconst listContainer = document.querySelector('.to-do-list-ul')\r\n\r\nwindow.onload;\r\nlistContainer.innerHTML\r\n\r\nconst toDos = [\r\n  {\r\n    description: 'Workout',\r\n    completed: false,\r\n    index: 1\r\n  },\r\n\r\n  {\r\n    description: 'Grocery Shopping',\r\n    completed: false,\r\n    index: 2\r\n  },\r\n\r\n  {\r\n    description: 'Watch The Bat-Man',\r\n    completed: false,\r\n    index: 3\r\n  }\r\n\r\n]\r\n\r\ndocument.querySelector('.to-do-list-ul').innerHTML = toDos.map((data) =>\r\n\r\n  `<li class=\"to-do-item\">\r\n  <div class=\"li-div\">\r\n  <input class=\"to-do-check\" type=\"checkbox\">\r\n  <p>${data.description}</p>\r\n  </div>\r\n  <div class=\"img-div\">\r\n  <img src=\"${_assets_images_3_dots_png__WEBPACK_IMPORTED_MODULE_2__}\" alt=\"3-dots\" class=\"li-img\">\r\n  </div>\r\n  </li>`).join('')\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://To-Do-List/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _src_assets_images_3_dots_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/assets/images/3-dots.png */ \"./src/assets/images/3-dots.png\");\n/* harmony import */ var _src_assets_images_add_item_img_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/assets/images/add-item-img.png */ \"./src/assets/images/add-item-img.png\");\n/* harmony import */ var _src_assets_images_refresh_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/assets/images/refresh.png */ \"./src/assets/images/refresh.png\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst listContainer = document.querySelector('.to-do-list-ul')\r\n\r\n// document.getElementById('.refresh').innerHTML = refresh.src\r\n// document.getElementById('.arrow').innerHTML = arrow.src\r\ndocument.querySelector('.refresh').src = `${_src_assets_images_refresh_png__WEBPACK_IMPORTED_MODULE_4__}`\r\ndocument.querySelector('.arrow').src = `${_src_assets_images_add_item_img_png__WEBPACK_IMPORTED_MODULE_3__}`\r\n\r\n\r\nwindow.onload;\r\nlistContainer.innerHTML\r\n\r\nconst toDos = [\r\n  {\r\n    description: 'Lift Heavy Things',\r\n    completed: false,\r\n    index: 1\r\n  },\r\n\r\n  {\r\n    description: 'Eat a 12 oz Steak',\r\n    completed: false,\r\n    index: 2\r\n  },\r\n\r\n  {\r\n    description: 'Watch The Bat-Man(Specifically the one with Robert Pattinson)',\r\n    completed: false,\r\n    index: 3\r\n  }\r\n\r\n]\r\n\r\ndocument.querySelector('.to-do-list-ul').innerHTML = toDos.map((data) =>\r\n\r\n  `<li class=\"to-do-item\">\r\n  <div class=\"li-div\">\r\n  <input class=\"to-do-check\" type=\"checkbox\">\r\n  <p>${data.description}</p>\r\n  </div>\r\n  <div class=\"img-div\">\r\n  <img src=\"${_src_assets_images_3_dots_png__WEBPACK_IMPORTED_MODULE_2__}\" alt=\"3-dots\" class=\"li-img\">\r\n  </div>\r\n  </li>`).join('')\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://To-Do-List/./src/index.js?");
 
 /***/ }),
 
-/***/ "./assets/images/3-dots.png":
-/*!**********************************!*\
-  !*** ./assets/images/3-dots.png ***!
-  \**********************************/
+/***/ "./src/assets/images/3-dots.png":
+/*!**************************************!*\
+  !*** ./src/assets/images/3-dots.png ***!
+  \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"f6c20d5b81abc6322bc4.png\";\n\n//# sourceURL=webpack://To-Do-List/./assets/images/3-dots.png?");
+eval("module.exports = __webpack_require__.p + \"832f55e372c72412f2d9.png\";\n\n//# sourceURL=webpack://To-Do-List/./src/assets/images/3-dots.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/add-item-img.png":
+/*!********************************************!*\
+  !*** ./src/assets/images/add-item-img.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a2221c1d0fe383e1a825.png\";\n\n//# sourceURL=webpack://To-Do-List/./src/assets/images/add-item-img.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/refresh.png":
+/*!***************************************!*\
+  !*** ./src/assets/images/refresh.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5cef00572e645dbee088.png\";\n\n//# sourceURL=webpack://To-Do-List/./src/assets/images/refresh.png?");
 
 /***/ })
 
