@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+// eslint-disable-next-line no-unused-vars
 import _ from 'lodash'
 import './style.css'
 import menu from '../src/assets/images/3-dots.png'
@@ -12,7 +12,9 @@ const listContainer = document.querySelector('.to-do-list-ul')
 document.querySelector('.refresh').src = `${refresh}`
 document.querySelector('.arrow').src = `${arrow}`
 
+// eslint-disable-next-line no-unused-expressions
 window.onload
+// eslint-disable-next-line no-unused-expressions
 listContainer.innerHTML
 
 const toDos = [
