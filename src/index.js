@@ -1,5 +1,6 @@
-import _ from 'lodash';
-import './style.css';
+/* eslint-disable no-unused-expressions */
+import _ from 'lodash'
+import './style.css'
 import menu from '../src/assets/images/3-dots.png'
 import arrow from '../src/assets/images/add-item-img.png'
 import refresh from '../src/assets/images/refresh.png'
@@ -11,8 +12,7 @@ const listContainer = document.querySelector('.to-do-list-ul')
 document.querySelector('.refresh').src = `${refresh}`
 document.querySelector('.arrow').src = `${arrow}`
 
-
-window.onload;
+window.onload
 listContainer.innerHTML
 
 const toDos = [
@@ -48,12 +48,3 @@ document.querySelector('.to-do-list-ul').innerHTML = toDos.map((data) =>
   <img src="${menu}" alt="3-dots" class="li-img">
   </div>
   </li>`).join('')
-
-
-
-
-
-
-
-
-
