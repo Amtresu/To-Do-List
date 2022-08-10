@@ -114,9 +114,9 @@ ul {
   margin-right: 10px;
 }
 
-.arrow:hover{
+.arrow:hover, .li-img:hover{
   filter: brightness(50%);
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .remove-button {
