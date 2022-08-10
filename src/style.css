@@ -80,14 +80,20 @@ ul {
   margin-right: 10px;
 }
 
-.form-container {
+.form-container{
+  width: 100%;
+}
+
+.form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
+
 
 .add-item {
   width: 100%;
@@ -123,4 +129,10 @@ ul {
 .remove-button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.to-do-item-form{
+  width: 100%;
+  height: 100%;
+  border: none;
 }
