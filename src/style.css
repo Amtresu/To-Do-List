@@ -114,6 +114,11 @@ ul {
   margin-right: 10px;
 }
 
+.arrow:hover{
+  filter: brightness(50%);
+  transform: scale(1.1);
+}
+
 .remove-button {
   border: none;
   width: 100%;
