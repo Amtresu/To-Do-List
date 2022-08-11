@@ -36,7 +36,6 @@ const changeItem = (value, id) => {
   const arr = Storage.getLocalStorage()
   arr[id - 1].description = value
   Storage.SetLocalStorage(arr)
-  console.log(arr)
 }
 const markCompleted = (checkbox, id, toDoList) => {
   const arr = Storage.getLocalStorage()
@@ -99,13 +98,27 @@ export const display = (output) => {
       })
     }
   }
+
+  // const toggleAbilitiy = () => {
+  //   const test = document.querySelectorAll('.to-do-item-form')
+  //   item.classList.toggle('active')
+  // }
   const checkBox = document.querySelectorAll('.to-do-check')
   if (checkBox.length !== 0) {
     for (let i = 0; i < checkBox.length; i++) {
       checkBox[i].addEventListener('change', (e) => {
         const id = e.target.id.replace('check-', '')
         markCompleted(e.target, id, checkBox)
+        item.classList.toggle('active')
       })
     }
   }
+  // const test = document.querySelectorAll('.to-do-item-form')
+  // if (test.length !== 0) {
+  //   for (let i = 0; i < test.length; i++) {
+  //     test[i].addEventListener('change', (e) => {
+  //       test.classList.toggle = 'active'
+  //     })
+  //   }
+  // }
 }
