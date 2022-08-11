@@ -38,14 +38,40 @@ const changeItem = (value, id) => {
   Storage.SetLocalStorage(arr)
   console.log(arr)
 }
+const markCompleted = (checkbox, id, toDoList) => {
+  const arr = Storage.getLocalStorage()
+  arr[id - 1].completed = checkbox.checked
+  Storage.SetLocalStorage(arr)
+  display(toDoList)
+}
+
+export const clear = (toDoList) => {
+  let arr = Storage.getLocalStorage()
+  arr = arr.filter((e) => e.completed !== true)
+  arr.forEach((item, index) => {
+    item.index = index + 1
+  })
+  Storage.SetLocalStorage(arr)
+  display(toDoList)
+}
+
+export const clearAll = () => {
+  const toDoList = document.querySelector('.to-do-list-ul')
+  window.localStorage.clear()
+  toDoList.innerHTML = ''
+}
 
 export const display = (output) => {
   const storageManager = Storage.getLocalStorage()
   output.innerHTML = null
   storageManager.forEach((item) => {
+    let checkbox
+    if (item.completed) {
+      checkbox = 'checked'
+    }
     output.innerHTML += `<li class="to-do-item">
       <div class="li-div">
-      <input class="to-do-check" type="checkbox" id="check-${item.index}">
+      <input class="to-do-check" type="checkbox" id="check-${item.index}" ${checkbox}>
       <input  type='text' value="${item.description}" class="to-do-item-form" id="${item.index}"></input>
       </div>
       <div class="img-div">
@@ -70,7 +96,15 @@ export const display = (output) => {
       item[i].addEventListener('change', (e) => {
         const { id } = e.target
         changeItem(item[i].value, id)
-        console.log('chagen')
+      })
+    }
+  }
+  const checkBox = document.querySelectorAll('.to-do-check')
+  if (checkBox.length !== 0) {
+    for (let i = 0; i < checkBox.length; i++) {
+      checkBox[i].addEventListener('change', (e) => {
+        const id = e.target.id.replace('check-', '')
+        markCompleted(e.target, id, checkBox)
       })
     }
   }
