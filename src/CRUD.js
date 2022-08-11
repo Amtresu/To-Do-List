@@ -1,4 +1,3 @@
-
 import Storage from './storage.js'
 import menu from '../src/assets/images/3-dots.png'
 
@@ -37,6 +36,7 @@ const changeItem = (value, id) => {
   const arr = Storage.getLocalStorage()
   arr[id - 1].description = value
   Storage.SetLocalStorage(arr)
+  console.log(arr)
 }
 
 export const display = (output) => {
@@ -69,7 +69,7 @@ export const display = (output) => {
     for (let i = 0; i < item.length; i++) {
       item[i].addEventListener('change', (e) => {
         const { id } = e.target
-        changeItem(item.value, id)
+        changeItem(item[i].value, id)
         console.log('chagen')
       })
     }

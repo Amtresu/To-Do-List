@@ -3,7 +3,7 @@ import _, { update } from 'lodash'
 import './style.css'
 import arrow from '../src/assets/images/add-item-img.png'
 import refresh from '../src/assets/images/refresh.png'
-import { display, addToDo} from './CRUD.js'
+import { display, addToDo } from './CRUD.js'
 
 document.querySelector('.refresh').src = `${refresh}`
 document.querySelector('.arrow').src = `${arrow}`
