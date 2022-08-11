@@ -81,11 +81,16 @@ ul {
 }
 
 .form-container {
+  width: 100%;
+}
+
+.form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -108,6 +113,12 @@ ul {
   margin-right: 10px;
 }
 
+.arrow:hover,
+.li-img:hover {
+  filter: brightness(50%);
+  transform: scale(1.3);
+}
+
 .remove-button {
   border: none;
   width: 100%;
@@ -123,4 +134,10 @@ ul {
 .remove-button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.to-do-item-form {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
