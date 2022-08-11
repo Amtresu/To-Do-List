@@ -33,14 +33,20 @@ export const removeToDo = (id) => {
   return id
 }
 
+const changeItem = (value, id) => {
+  const arr = Storage.getLocalStorage()
+  arr[id - 1].description = value
+  Storage.SetLocalStorage(arr)
+}
+
 export const display = (output) => {
-  const storeManage = Storage.getLocalStorage()
+  const storageManager = Storage.getLocalStorage()
   output.innerHTML = null
-  storeManage.forEach((item) => {
+  storageManager.forEach((item) => {
     output.innerHTML += `<li class="to-do-item">
       <div class="li-div">
       <input class="to-do-check" type="checkbox" id="check-${item.index}">
-      <input  type='text' value="${item.description}" class="to-do-item-form" id=${item.index} readOnly></input>
+      <input  type='text' value="${item.description}" class="to-do-item-form" id="${item.index}"></input>
       </div>
       <div class="img-div">
       <img src="${menu}" alt="3-dots"  id="${item.index}" class="li-img">
@@ -55,6 +61,16 @@ export const display = (output) => {
         const { id } = e.target
         removeToDo(id)
         display(toDoList)
+      })
+    }
+  }
+  const item = document.querySelectorAll('.to-do-item-form')
+  if (item.length !== 0) {
+    for (let i = 0; i < item.length; i++) {
+      item[i].addEventListener('change', (e) => {
+        const { id } = e.target
+        changeItem(item.value, id)
+        console.log('chagen')
       })
     }
   }
