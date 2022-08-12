@@ -143,10 +143,6 @@ ul {
   text-decoration: none;
 }
 
-.to-do-item-form.active {
-  text-decoration: line-through;
-}
-
-.active {
+.checked {
   text-decoration: line-through;
 }

@@ -70,8 +70,8 @@ export const display = (output) => {
     }
     output.innerHTML += `<li class="to-do-item">
       <div class="li-div">
-      <input class="to-do-check" type="checkbox" id="check-${item.index}" ${checkbox}>
-      <input  type='text' value="${item.description}" class="to-do-item-form" id="${item.index}"></input>
+      <input class="to-do-check " type="checkbox" id="check-${item.index}" ${checkbox}>
+      <input  type='text' value="${item.description}" class="test to-do-item-form ${checkbox}" id="${item.index}"></input>
       </div>
       <div class="img-div">
       <img src="${menu}" alt="3-dots"  id="${item.index}" class="li-img">
@@ -109,16 +109,8 @@ export const display = (output) => {
       checkBox[i].addEventListener('change', (e) => {
         const id = e.target.id.replace('check-', '')
         markCompleted(e.target, id, checkBox)
-        item.classList.toggle('active')
+        window.location.reload()
       })
     }
   }
-  // const test = document.querySelectorAll('.to-do-item-form')
-  // if (test.length !== 0) {
-  //   for (let i = 0; i < test.length; i++) {
-  //     test[i].addEventListener('change', (e) => {
-  //       test.classList.toggle = 'active'
-  //     })
-  //   }
-  // }
 }
