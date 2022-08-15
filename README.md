@@ -1,4 +1,4 @@
-# To-Do List(https://amtresu.github.io/To-Do-List/dist/)
+# To-Do List
 
 > Here I'm making a To-Do List to keep track of my activites. 
 
