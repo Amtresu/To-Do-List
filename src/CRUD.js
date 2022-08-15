@@ -99,10 +99,6 @@ export const display = (output) => {
     }
   }
 
-  // const toggleAbilitiy = () => {
-  //   const test = document.querySelectorAll('.to-do-item-form')
-  //   item.classList.toggle('active')
-  // }
   const checkBox = document.querySelectorAll('.to-do-check')
   if (checkBox.length !== 0) {
     for (let i = 0; i < checkBox.length; i++) {
