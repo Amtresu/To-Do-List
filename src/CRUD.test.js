@@ -14,16 +14,14 @@ describe('Testing the add toDo function', () =>{
     })
 
     test('removing items', () => {
-      const storage = JSON.parse(localStorage.getItem('to-do-item'))
-      
+      const storage = JSON.parse(localStorage.getItem('to-do-item'));
 
       addToDo(storage, '1')
       addToDo (storage, '2')
       addToDo (storage, '3')
 
       const removeItems = removeToDo(2)
-      expect(removeItems).toEqual(2)({
-      })
+      expect(removeItems).toEqual(2)
     })
  
 
