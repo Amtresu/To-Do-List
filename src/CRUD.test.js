@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { display, addToDo, clear, clearAll} from './CRUD.js'
+import { display, addToDo, clear, clearAll, removeToDo} from './CRUD.js'
 
 describe('Testing the add toDo function', () =>{
     test('add item to array of items', () => {
@@ -15,13 +15,15 @@ describe('Testing the add toDo function', () =>{
 
     test('removing items', () => {
       const storage = JSON.parse(localStorage.getItem('to-do-item'))
-      const removeItems = clear(storage)
+      
 
-      expect(removeItems).toEqual([{
-        description: null,
-        completed: false,
-        index: 1
-      }])
+      addToDo(storage, '1')
+      addToDo (storage, '2')
+      addToDo (storage, '3')
+
+      const removeItems = removeToDo(2)
+      expect(removeItems).toEqual(2)({
+      })
     })
  
 
