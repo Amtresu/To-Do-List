@@ -13,6 +13,18 @@ describe('Testing the add toDo function', () =>{
         }])
     })
 
+    test('removing items', () => {
+      const storage = JSON.parse(localStorage.getItem('to-do-item'))
+      const removeItems = clear(storage)
+
+      expect(removeItems).toEqual([{
+        description: null,
+        completed: false,
+        index: 1
+      }])
+    })
+ 
+
     test('testing local storage', () => {
         const obj = {
           description: 'value',
