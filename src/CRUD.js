@@ -1,5 +1,5 @@
 import Storage from './storage.js'
-// import menu from '../src/assets/images/3-dots.png'
+import menu from '../src/assets/images/3-dots.png'
 
 const toDoList = document.querySelector('.to-do-list-ul')
 
@@ -77,7 +77,7 @@ export const display = (output) => {
       <input  type='text' value="${item.description}" class="test to-do-item-form ${checkbox}" id="${item.index}"></input>
       </div>
       <div class="img-div">
-      <img src="" alt="3-dots"  id="${item.index}" class="li-img">
+      <img src="${menu}" alt="3-dots"  id="${item.index}" class="li-img">
       </div>
       </li>`
   })
