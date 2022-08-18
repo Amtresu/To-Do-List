@@ -64,4 +64,16 @@ describe('Should Edit Item values', () => {
     }]))
   })
 
+  test('Should mark completed', () => {
+    localStorage.clear()
+    addToDo('1')
+    markCompleted(1);
+    const locStore = localStorage.getItem('to-do-item');
+    expect(locStore).toEqual(JSON.stringify([{
+      description: '1',
+      completed: true,
+      index: 1,
+    }]))
+  })
+
 })
