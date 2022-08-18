@@ -45,4 +45,5 @@ clearCompleted.addEventListener('click', () => {
 
 refreshImg.addEventListener('click', () => {
   clearAll(toDoList)
+  toDoList.innerHTML = ''
 })
