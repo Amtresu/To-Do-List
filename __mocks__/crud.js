@@ -1,5 +1,5 @@
-import Storage from './storage.js'
-import menu from '../src/assets/images/3-dots.png'
+import Storage from '../__mocks__/storage.js'
+// import menu from '../src/assets/images/3-dots.png'
 
 const toDoList = document.querySelector('.to-do-list-ul')
 
@@ -22,6 +22,8 @@ export const addToDo = (value) => {
   return arr
 }
 
+export const getToDoList = () => Storage.getLocalStorage()
+
 export const removeToDo = (id) => {
   let arr = Storage.getLocalStorage()
   arr = arr.filter((e) => e.index.toString() !== id.toString())
@@ -38,21 +40,19 @@ export const changeItem = (value, id) => {
   Storage.SetLocalStorage(arr)
 }
 
-const markCompleted = (checkbox, id, toDoList) => {
+export const markCompleted = (id) => {
   const arr = Storage.getLocalStorage()
-  arr[id - 1].completed = checkbox.checked
+  arr[id - 1].completed = true
   Storage.SetLocalStorage(arr)
-  display(toDoList)
 }
 
-export const clear = (toDoList) => {
+export const clear = () => {
   let arr = Storage.getLocalStorage()
   arr = arr.filter((e) => e.completed !== true)
   arr.forEach((item, index) => {
     item.index = index + 1
   })
   Storage.SetLocalStorage(arr)
-  display(toDoList)
 }
 
 export const clearAll = () => {
@@ -73,7 +73,7 @@ export const display = (output) => {
       <input  type='text' value="${item.description}" class="test to-do-item-form ${checkbox}" id="${item.index}"></input>
       </div>
       <div class="img-div">
-      <img src="${menu}" alt="3-dots"  id="${item.index}" class="li-img">
+      <img src="" alt="3-dots"  id="${item.index}" class="li-img">
       </div>
       </li>`
   })
